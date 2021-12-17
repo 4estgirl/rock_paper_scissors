@@ -1,3 +1,5 @@
+//plays a single round
+function playRound () {
 //Prompt user to input Rock Paper or Scissors
 let userInput = prompt("Make your choice!", )
 //Convert user input to all caps
@@ -26,7 +28,11 @@ if (computerChoice === userChoice) {
 } else {result = "YOU WIN"}
 console.log(result)
 document.write(result)
+}
 //Winner of round is announced
 //Overall game score is updated
 //Loop 5 times
+for (var i = 0; i < 5; ++i){
+  playRound();
+}
 //After the 5th round, the grand champion is announced

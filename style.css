@@ -1,0 +1,25 @@
+* {
+    background-color: paleturquoise;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.directions {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: turquoise;
+}
+
+h2,p {
+    background-color: turquoise;
+}
+
+.game {
+    background-color: turquoise;
+}

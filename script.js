@@ -13,8 +13,19 @@ if (number <= 50) {
     computerChoice =  "PAPER";
 } else {computerChoice =  "SCISSORS";}
 console.log(computerChoice)
-document.write(" The computer chose " + computerChoice + "!")
+document.write(" The computer chose " + computerChoice + "!  ")
 //User selection is compared to Computer selection to determine winner of round
+if (computerChoice === userChoice) {
+  result = "TIE";
+} else if (computerChoice === "ROCK" && userChoice === "SCISSORS") {
+  result = "COMPUTER WINS";
+} else if (computerChoice === "PAPER" && userChoice === "ROCK") {
+  result = "COMPUTER WINS";
+} else if (computerChoice === "SCISSORS" && userChoice === "PAPER") {
+  result = "COMPUTER WINS";
+} else {result = "YOU WIN"}
+console.log(result)
+document.write(result)
 //Winner of round is announced
 //Overall game score is updated
 //Loop 5 times

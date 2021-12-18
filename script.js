@@ -26,11 +26,8 @@ if (computerChoice === userChoice) {
 } else if (computerChoice === "SCISSORS" && userChoice === "PAPER") {
   result = "COMPUTER WINS";
 } else {result = "YOU WIN"}
-console.log(result)
-document.write(result)
+document.write(result + "<br>")
 }
-//Winner of round is announced
-//Overall game score is updated
 //Loop 5 times
 round = 0
 userScore = 0
@@ -44,7 +41,7 @@ for (var i = 0; i < 5; ++i){
   } else if (result === "COMPUTER WINS") {
     computerScore += 1
   }
-  document.write("  The current score is You: " + userScore + " Computer: " + computerScore + " ")
+  document.write("The current score is You: " + userScore + " Computer: " + computerScore + "<br>")
 }
 //After the 5th round, the grand champion is announced
 if (userScore > computerScore) {

@@ -19,13 +19,13 @@ document.write(" The computer chose " + computerChoice + "!  ")
 //User selection is compared to Computer selection to determine winner of round
 if (computerChoice === userChoice) {
   result = "TIE";
-} else if (computerChoice === "ROCK" && userChoice === "SCISSORS") {
-  result = "COMPUTER WINS";
-} else if (computerChoice === "PAPER" && userChoice === "ROCK") {
-  result = "COMPUTER WINS";
-} else if (computerChoice === "SCISSORS" && userChoice === "PAPER") {
-  result = "COMPUTER WINS";
-} else {result = "YOU WIN"}
+} else if (userChoice === "ROCK" && computerChoice === "SCISSORS") {
+  result = "YOU WIN";
+} else if (userChoice === "PAPER" && computerChoice === "ROCK") {
+  result = "YOU WIN";
+} else if (userChoice === "SCISSORS" && computerChoice === "PAPER") {
+  result = "YOU WIN";
+} else {result = "COMPUTER WINS"}
 document.write(result + "<br>")
 }
 //Loop 5 times

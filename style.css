@@ -18,7 +18,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-h2,p {
+h2,p,strong {
     background-color: turquoise;
 }
 

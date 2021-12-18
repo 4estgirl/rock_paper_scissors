@@ -32,7 +32,23 @@ document.write(result)
 //Winner of round is announced
 //Overall game score is updated
 //Loop 5 times
+round = 0
+userScore = 0
+computerScore = 0
 for (var i = 0; i < 5; ++i){
+  round += 1
+  document.write("ROUND " + round + ": ")
   playRound();
+  if (result === "YOU WIN") {
+    userScore += 1;
+  } else if (result === "COMPUTER WINS") {
+    computerScore += 1
+  }
+  document.write("  The current score is You: " + userScore + " Computer: " + computerScore + " ")
 }
 //After the 5th round, the grand champion is announced
+if (userScore > computerScore) {
+  document.write("YOU are the grand champion!");
+} else if (userScore < computerScore) {
+  document.write("You lost, the COMPUTER is the grand champion")
+} else {document.write("There was a tie, NO ONE is the grand champion.")}

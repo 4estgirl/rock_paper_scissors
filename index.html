@@ -6,16 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"src="script.js" defer></script>
 </head>
 <body>
     <h1>Play Rock, Paper, Scissors</h1>
     <div class="directions">
         <h2>Directions</h2>
-        <p>Enter Rock, Paper, or Scissors into the prompt, and then hit Enter to test your skills against the computer. After five rounds, a grand champion will be announced! Let's play!</p>
-        <p><strong>**WARNING: Entering a word other than rock, paper, or scissors, will result in automatic loss. **</strong></p>
+        <p>Click Rock, Paper, or Scissors to make your selection, and test your skills against the computer. After five rounds, a grand champion will be announced! Let's play!</p>
+    </div>
+    <div class="btns">
+        <button class= "btn" id="rock">Rock</button>
+        <button class= "btn" id="paper">Paper</button>
+        <button class= "btn" id="scissors">Scissors</button>
     </div>
     <div class="game">
-        <script type="text/javascript"src="script.js"></script>
+        <div class="results">
+            <h3>Your Choice</h2>
+            <p id="USER"></p>
+        </div>
+        <div class="results">
+            <h3>Computer Choice</h2>
+            <p id="COMP"></p>
+        </div>
+        <div class="results">
+            <h3>Winner</h2>
+            <p id="WINNER"></p>
+        </div>
+
     </div>
 </body>
 </html>

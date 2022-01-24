@@ -4,6 +4,7 @@
 
 h1 {
     text-align: center;
+    font-size: 60px;
 }
 
 
@@ -18,16 +19,67 @@ h1 {
     margin-bottom: 10px;
 }
 
-h2,p,strong {
+h3,h2,p,strong {
     background-color: turquoise;
 }
 
-.game {
+.btns {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 25px;
     background-color: turquoise;
     border-radius: 25px;
     margin-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.btn{
+    font-size: 50px;
+    font-family: Snell Roundhand, cursive;
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(197, 187, 70);
+}
+
+#rock {
+    background-color: gray;
+}
+
+#paper {
+    background-color: snow;
+}
+
+#scissors {
+    background-color: palevioletred;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-color: turquoise;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.results {
+    padding: 25px;
+    background-color: turquoise;
+    margin-bottom: 10px;
+    font-family: Snell Roundhand, cursive;
+    font-size: 30px;
+}
+
+h1,h2,h3 {
+    font-family: cursive;
+}
+
+h2,h3 {
+    font-size: 40px;
+    margin-bottom: 2px;
+}
+
+p{
+    margin-top: 2px;
 }

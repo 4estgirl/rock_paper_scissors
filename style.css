@@ -23,7 +23,7 @@ h3,h2,p,strong {
     background-color: turquoise;
 }
 
-.btns {
+.btns,#scores {
     display: flex;
     align-items: center;
     padding: 25px;
@@ -71,7 +71,7 @@ h3,h2,p,strong {
     font-size: 30px;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
     font-family: cursive;
 }
 
@@ -82,4 +82,23 @@ h2,h3 {
 
 p{
     margin-top: 2px;
+}
+
+h4 {
+    font-size: 40px;
+    background-color: turquoise;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
 }

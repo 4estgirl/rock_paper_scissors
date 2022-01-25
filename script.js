@@ -1,5 +1,9 @@
 //NEW UI CODE
 let computerChoice = ""
+let result = ""
+let userWinCounter = 0
+let computerWinCounter = 0
+let modal = document.getElementById("#modal")
 
 function computerChooses () {
   //Computer randomly chooses a number
@@ -9,10 +13,19 @@ function computerChooses () {
   } else if (number >= 51 || number <=75) {
       computerChoice =  "PAPER";
   } else {computerChoice =  "SCISSORS";}
-  console.log(computerChoice)
   document.getElementById("COMP").innerHTML += "<br>" + computerChoice;
   return computerChoice;
   }
+
+//disable buttons after a player reaches 5 points
+function disableButtons(){
+  if (userWinCounter >= 5 | computerWinCounter >= 5){
+    document.getElementById("#rock").disabled = true;
+    document.getElementById("#paper").disabled = true;
+    document.getElementById("#scissors").disabled = true;
+    document.getElementsByClassName("btn").disabled = true;
+  }
+}
 
 //plays a single round
 function playRound (userChoice) {
@@ -23,37 +36,52 @@ if (computerChoice === userChoice) {
   result = "TIE";
 } else if (userChoice === "ROCK" && computerChoice === "SCISSORS") {
   result = "YOU WIN";
+  userWinCounter += 1;
 } else if (userChoice === "PAPER" && computerChoice === "ROCK") {
   result = "YOU WIN";
+  userWinCounter += 1;
 } else if (userChoice === "SCISSORS" && computerChoice === "PAPER") {
   result = "YOU WIN";
-} else {result = "COMPUTER WINS"}
+  userWinCounter += 1;
+} else {
+  result = "COMPUTER WINS";
+  computerWinCounter += 1;
+}
 document.getElementById("WINNER").innerHTML += "<br>" + result
+document.getElementById("userScore").innerHTML = "Your Score: "
+ + userWinCounter
+ document.getElementById("computerScore").innerHTML = "Computer Score: "
+ + computerWinCounter
 }
 
 //attaches event listerner to buttons
 const rockBtn = document.querySelector("#rock");
 rockBtn.addEventListener("click", () => {
+  disableButtons();
   computerChooses();
   playRound("ROCK");
-  
 });
-
 const paperBtn = document.querySelector("#paper");
 paperBtn.addEventListener("click", () => {
+  disableButtons();
   computerChooses();
   playRound("PAPER");
 });
-
 const scissorsBtn = document.querySelector("#scissors");
 scissorsBtn.addEventListener("click", () => {
+  disableButtons();
   computerChooses();
   playRound("SCISSORS");
 });
 
-
-
-
+//Announce winner
+function announceWinner (){
+  if (userWinCounter = 5){
+    modal.style.display = "block";
+  } else if (computerWinCounter = 5){
+    modal.style.display = "block";
+  }
+}
 
 
 

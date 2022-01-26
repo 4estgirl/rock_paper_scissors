@@ -9,34 +9,41 @@
     <script type="text/javascript"src="script.js" defer></script>
 </head>
 <body>
-    <h1>Play Rock, Paper, Scissors</h1>
-    <div class="directions">
-        <h2>Directions</h2>
-        <p>Click Rock, Paper, or Scissors to make your selection, and test your skills against the computer. After five rounds, a grand champion will be announced! Let's play!</p>
-    </div>
-    <div class="btns">
-        <button class= "btn" id="rock">Rock</button>
-        <button class= "btn" id="paper">Paper</button>
-        <button class= "btn" id="scissors">Scissors</button>
-    </div>
-    <div id="scores">
-        <h4 class="score" id="userScore"> Your Score: 0</h4>
-        <h4 class="score" id="computerScore">Computer Score: 0</h4>
-    </div>
-    <div class="game">
-        <div class="results">
-            <h3>Your Choice</h2>
-            <p id="USER"></p>
+    <div class="flex">
+        <h1>Play Rock, Paper, Scissors</h1>
+        <div id="directions" class="directions">
+            <h2>Directions</h2>
+            <p>Click Rock, Paper, or Scissors to make your selection, and test your skills against the computer. After a player reaches five points, a grand champion will be announced! Let's play!</p>
         </div>
-        <div class="results">
-            <h3>Computer Choice</h2>
-            <p id="COMP"></p>
+        <div class="btns">
+            <button class= "btn" id="rock">Rock</button>
+            <button class= "btn" id="paper">Paper</button>
+            <button class= "btn" id="scissors">Scissors</button>
+            <div id="scores">
+                <h4 class="score" id="userScore"> Your Score: 0</h4>
+                <h4 class="score" id="computerScore">Computer Score: 0</h4>
+            </div>
         </div>
-        <div class="results">
-            <h3>Winner</h2>
-            <p id="WINNER"></p>
+        <div class="game">
+            <div class="results">
+                <h3>Your Choice</h2>
+                <p id="USER"></p>
+             </div>
+            <div class="results">
+                <h3>Computer Choice</h2>
+                <p id="COMP"></p>
+            </div>
+            <div class="results">
+                <h3>Winner</h2>
+                <p id="WINNER"></p>
+            </div>
         </div>
+        <div class="modal">
+            <div class="modal-box">
+                <h1 id="announce">This is a test modal</h1>
+                <button class="start-over">Play Again</button>
+            </div>
+        </div>                
     </div>
-    <div id="modal"> TEST </div>
 </body>
 </html>
